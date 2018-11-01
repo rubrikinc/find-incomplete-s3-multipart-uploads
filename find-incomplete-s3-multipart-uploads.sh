@@ -1,3 +1,5 @@
+#!/bin/bash
+
 for bucket in $(aws s3api list-buckets --query 'Buckets[*].{Name:Name}' --output text)
 do 
     
@@ -12,6 +14,7 @@ do
         do
             keyname=$(echo $part | awk '{print $1}')
             upload_id=$(echo $part | awk '{print $2}')
+            aws s3api list-parts --upload-id $upload_id --bucket $bucket --key $keyname
             id_size=$(aws s3api list-parts --upload-id $upload_id --bucket $bucket --key $keyname | grep "Size" | egrep -o '[0-9]+' | awk '{ SUM += $1} END { print SUM }')
             echo "size: $id_size bytes"
             # uncomment below to delete instead of printing the size
