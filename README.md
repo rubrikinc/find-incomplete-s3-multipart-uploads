@@ -43,7 +43,7 @@ Using the `--verbose` option will produce detailed output about each file includ
 
 ## Licensing
 
-Find Incomplete S3 Multi-Part Uploads is freely distributed under the [GPLv3 License](https://www.gnu.org/licenses/gpl-3.0.en.html "LICENSE"). See [LICENSE](https://github.com/rubrik-devops/find-incomplete-s3-multipart-uploads/blob/master/LICENSE) for details.
+Find Incomplete S3 Multi-Part Uploads is freely distributed under MIT. See [LICENSE](https://github.com/rubrik-devops/find-incomplete-s3-multipart-uploads/blob/master/LICENSE) for details.
 
 ## Support
 
