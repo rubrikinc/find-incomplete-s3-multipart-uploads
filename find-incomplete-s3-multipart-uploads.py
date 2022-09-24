@@ -50,7 +50,7 @@ else:
     session = boto3.session.Session()
 
 # Create an S3 client
-s3 = boto3.client('s3')
+s3 = session.client('s3')
 
 # Call S3 to list current buckets
 response = s3.list_buckets()
